@@ -1,0 +1,22 @@
+ Sistema de Películas Favoritas
+ Entidades: 
+ -Pelicula 
+ -Usuario 
+ -Flujo: Usuario → agrega películas a favoritos → consulta su lista 
+ 
+ Métodos clave: 
+ -agregar_favorita() 
+ -listar_favoritas() 
+ -eliminar_favorita()
+ 
+ 
+Validación sugerida: No permitir repetir la misma película en favoritos Validar ID único de película
+
+Recomendación para la práctica:
+ Trabajemos con la siguiente estructura: 
+ class Entidad1:
+  pass 
+  class Entidad2:
+   pass 
+   class Sistema: #(Ejemplos de nombres para esta clase: Tienda, SistemaDeVentas, HotelAdmin, Clinica o un nombre alucivo al proyec7o) 
+   pass
