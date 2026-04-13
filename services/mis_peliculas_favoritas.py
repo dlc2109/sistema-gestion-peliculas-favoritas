@@ -6,9 +6,19 @@ class MisPeliculasFavoritas:
     def __init__(self,nombre):
         self.nombre = nombre
 
-    def agregar_pelicula(self,usuario,pelicula):
-        usuario.mis_fav.append(pelicula)
-        return f'La película {pelicula.titulo} fue agregada con éxito'
+    def agregar_pelicula(self, usuario):
+        titulo_peli = input('Ingresa Titulo: ').lower().strip()
+        genero_peli = input('Ingresa Genero: ').lower().strip()
+
+        try:
+            anio_peli = int(input('Ingrese anio: '))
+            id_peli = int(input('Ingresa ID: '))
+        except ValueError:
+            return 'Error: Ingresa números válidos para el anio e ID.'
+
+        nueva_peli = Pelicula(titulo_peli, genero_peli, anio_peli, id_peli)
+        usuario.mis_fav.append(nueva_peli)
+        return f'La película {nueva_peli.titulo} fue agregada con éxito'
     
     def listar_peliculas(self,Usuario):
         if not Usuario.mis_fav:
